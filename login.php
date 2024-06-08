@@ -6,10 +6,10 @@
     <title>Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, #2980b9, #2c3e50); /* Gradient Background */
+            background: linear-gradient(to bottom right, #1abc9c, #2ecc71);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -17,70 +17,93 @@
         }
 
         .login-container {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            max-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
             width: 100%;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         h2 {
-            color: #fff;
-            margin-bottom: 20px;
+            font-size: 26px;
+            color: #2ecc71;
+            margin-bottom: 25px;
         }
 
         label {
             display: block;
             margin-bottom: 10px;
-            color: #333;
+            color: #555;
+            font-weight: bold;
         }
 
         input[type="text"],
         input[type="password"] {
-            width: calc(100% - 22px);
-            padding: 10px;
+            width: calc(100% - 24px);
+            padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #2ecc71;
         }
 
         .login-button {
-            background-color: #3498db;
+            background-color: #1abc9c;
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
+            font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease; /* Button Animation */
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .login-button:hover {
-            background-color: #2980b9; /* Button Hover Color */
+            background-color: #16a085;
+            transform: translateY(-2px);
+        }
+
+        .login-button:active {
+            background-color: #0e7e63;
+            transform: translateY(0);
         }
 
         .register-link {
             display: inline-block;
-            background-color: #2ecc71; /* Register Button Color */
+            background-color: #e74c3c;
             color: #fff;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
+            padding: 10px 15px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease; /* Button Animation */
+            transition: background-color 0.3s, transform 0.3s;
             text-decoration: none;
+            margin-top: 15px;
         }
 
         .register-link:hover {
-            background-color: #27ae60; /* Register Button Hover Color */
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .register-link:active {
+            background-color: #962d22;
+            transform: translateY(0);
         }
 
         .error-message {
             color: red;
             margin-top: 10px;
         }
-
     </style>
 </head>
 <body>
